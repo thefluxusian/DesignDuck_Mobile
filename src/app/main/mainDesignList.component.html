@@ -1,0 +1,67 @@
+<!--<ons-toolbar class="toolbar">
+  <div class="toolbar__left">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>test</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>test2</span>
+      </button>
+    </mat-menu>
+  </div>
+  <div class="center">Design Duck</div>
+  <div class="toolbar__right">
+  </div>
+</ons-toolbar>-->
+<ons-row>
+  <p><br></p>
+</ons-row>
+<ons-row>
+  <p><br></p>
+</ons-row>
+  <ons-row style="background-color: white; position: fixed;">
+      <ons-select>
+        <option *ngFor="let category of categories" >
+          {{category.viewValue}}
+        </option>
+      </ons-select>
+
+  </ons-row>
+
+<ons-row>
+  <p><br></p>
+</ons-row>
+<ons-row>
+  <p><br></p>
+</ons-row>
+
+  <ons-row>
+    <ons-col *ngFor="let item of items; let i = index">
+
+      <ons-card title="test">
+
+        <a [routerLink]="['/designDetail', item.projectId]" routerLinkActive="active">
+
+          <span><img src="assets/imgs/{{item.projectId}}.jpg" class="inline-block" style="width:100%;"></span>
+
+          <span class="text-primary">{{item.projectName}}</span><br>
+
+          <span class="text-center">{{item.projectAuthor}}</span>
+
+        </a>
+
+      </ons-card>
+
+    </ons-col>
+
+  </ons-row>
+

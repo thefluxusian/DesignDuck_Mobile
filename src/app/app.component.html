@@ -1,0 +1,37 @@
+<ons-page>
+  <mat-toolbar color="primary" style="position:fixed;">
+    <div class="toolbar__left">
+   <button mat-icon-button [matMenuTriggerFor]="menu">
+     <mat-icon>more_vert</mat-icon>
+   </button>
+   <mat-menu #menu="matMenu">
+     <button mat-menu-item>
+       <mat-icon>dialpad</mat-icon>
+       <span>Redial</span>
+     </button>
+     <button mat-menu-item disabled>
+       <mat-icon>voicemail</mat-icon>
+       <span>test</span>
+     </button>
+     <button mat-menu-item>
+       <mat-icon>notifications_off</mat-icon>
+       <span>test2</span>
+     </button>
+   </mat-menu>
+    </div>
+    <div class="center">
+      {{title}}
+    </div>
+    <div class="toolbar__right">
+      <button mat-icon-button >
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+</ons-page>
+
+
+
